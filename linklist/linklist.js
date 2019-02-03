@@ -78,6 +78,21 @@ class SingleLinkList{
         return newNode;
 
     }
+
+    getEliment(index){
+       if(index==0 || index>this.length){
+           return null
+       }
+       else{
+         var current=this.head;
+          for(let i=1 ; i<index;i++){
+             current=current.next
+
+          }
+          return current;
+       }
+
+    }
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
@@ -85,10 +100,4 @@ eliment.push(6);
 eliment.push(60);
 console.log(eliment);
 eliment.pop();
-console.log(eliment);
-eliment.pop();
-console.log(eliment);
-eliment.pop();
-console.log(eliment);
-eliment.pop();
-console.log(eliment);
+
