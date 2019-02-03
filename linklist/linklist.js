@@ -105,6 +105,31 @@ class SingleLinkList{
         }
 
     }
+
+    insertElement(value,index){
+        if(index<0 || index>this.length){
+            return false;
+        }
+        else if(index==0){
+            this.unshift(value);
+            
+        }
+        else if(index==this.length){
+            this.push(value);
+           
+        }
+        else{
+            var node=new Node(value);
+            var prevNode=this.getEliment(index-1);
+            node.next=prevNode.next;
+            prevNode.next=node;
+            this.length++;
+            
+        }
+       
+        return true;
+
+    }
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
