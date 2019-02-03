@@ -47,6 +47,21 @@ class SingleLinkList{
         return current;
 
     }
+    shift(){
+        if(!this.head){
+            return null;
+         }
+         var current=this.head;
+         this.head=this.head.next;
+         this.length--;
+         if(this.length===0){
+             this.head=null;
+             this.tail=null;
+         }
+         return current;
+
+
+    }
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
