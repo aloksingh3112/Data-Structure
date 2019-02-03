@@ -93,6 +93,18 @@ class SingleLinkList{
        }
 
     }
+
+    setEliment(value,index){
+        var node=this.getEliment(index);
+        if(!node){
+            return false;
+        }
+        else{
+           node=value;
+           return true;
+        }
+
+    }
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
