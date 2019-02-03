@@ -62,6 +62,22 @@ class SingleLinkList{
 
 
     }
+
+    unshift(value){
+        let newNode=new Node(value);
+        if(!this.head){
+            this.head=newNode;
+            this.tail=newNode;
+        }
+        else{
+        let current=this.head;
+        this.head=newNode;
+        this.head.next=current;
+        }
+        this.length++;
+        return newNode;
+
+    }
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
