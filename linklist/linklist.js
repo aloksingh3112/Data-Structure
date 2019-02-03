@@ -100,7 +100,7 @@ class SingleLinkList{
             return false;
         }
         else{
-           node=value;
+           node.val=value;
            return true;
         }
 
