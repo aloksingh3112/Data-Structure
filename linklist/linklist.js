@@ -130,11 +130,36 @@ class SingleLinkList{
         return true;
 
     }
+      remove(index){
+          if(index>this.length || index<=0){
+              return undefined
+          }
+          else if(index==length){
+              return this.pop();
+          }
+          else if(index==1){
+              return this.shift();
+
+          }
+          else{
+             prev=this.getEliment(index-1);
+             removed=prev.next;
+             prev.next=removed.next;
+             this.length--;
+             return removed;
+             
+          }
+          
+
+     }
+
+
+    
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
 eliment.push(6);
 eliment.push(60);
 console.log(eliment);
-eliment.pop();
+// eliment.pop();
 
