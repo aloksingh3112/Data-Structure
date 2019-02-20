@@ -154,12 +154,36 @@ class SingleLinkList{
      }
 
 
+     reverse(){
+         var node=this.head;
+         this.head=this.tail;
+         this.tail=node;
+         var next;
+         var prev=null;
+         for(var i=0;i<this.length;i++){
+             next=node.next;
+             node.next=prev;
+             prev=node
+             node=next;
+         }
+         return this;
+     }
+
+
+
+
+
     
 }
 var eliment=new SingleLinkList();
 eliment.push(5);
 eliment.push(6);
 eliment.push(60);
-console.log(eliment);
+eliment.push(8);
+eliment.push(9);
+
+
+
+console.log(eliment.reverse());
 // eliment.pop();
 
