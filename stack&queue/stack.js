@@ -28,4 +28,26 @@ class Stack{
         }
 
     }
+
+    pop(){
+        if(!this.first){
+            return null;
+        }
+        else if(
+       this.first==this.last
+        ){
+            var temp=this.first;
+            this.first=null;
+            this.last=null;
+            this.size--;
+            return temp;
+
+        }
+        else{
+            var temp=this.first;
+            this.first=temp.next;
+            this.size--;
+            return temp;
+        }
+    }
 }
