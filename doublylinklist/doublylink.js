@@ -28,9 +28,11 @@ class DoublyLinkList{
 
 
      }
-     this.length=this.length+1;
-     return this
+     this.length++;
+     return this;
     }
+
+    
 }
 
 var dls=new DoublyLinkList();
